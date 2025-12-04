@@ -13,8 +13,8 @@ except LookupError:
     nltk.download("punkt")
 
 # ---------- Gemini client ----------
-API_KEY = "AIzaSyC-ObFfAer6bCtZQ8h57HCXGboClx9JVYE"
-#os.getenv("GEMINI_API_KEY")
+
+os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise RuntimeError("GEMINI_API_KEY is not set. Please export it before running the app.")
 
@@ -177,4 +177,5 @@ def summarize_text(text: str, model: str = DEFAULT_MODEL) -> str:
 #         "Here is another unique sentence. Here is another unique sentence."
 #     )
 #     print("=== DEDUPLICATED TEST ===")
+
 #     print(deduplicate_text(sample))
